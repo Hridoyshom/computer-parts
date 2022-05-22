@@ -8,12 +8,12 @@ const ExtraSection = () => {
             </div>
             <div class="form-control">
                 <label class="label">
-                    <span class="label-text">Just Send us your Email</span>
+                    <span class="label-text font-semibold">Just Send us your Email</span>
                 </label>
                 <label class="input-group">
                     <span>Email</span>
                     <input type="text" class="input input-bordered" />
-                    <button className='btn ml-5' >Submit</button>
+                    <button className='btn ml-3' >Send</button>
 
                 </label>
 

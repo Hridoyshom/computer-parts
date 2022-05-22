@@ -1,9 +1,13 @@
 import React from 'react';
+import Banner from './Banner';
+import ExtraSection from './ExtraSection';
+import Navbar from './Navbar';
 
 const Home = () => {
     return (
         <div>
-            <h1>welcome home</h1>
+            <Banner></Banner>
+            <ExtraSection></ExtraSection>
         </div>
     );
 };

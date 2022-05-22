@@ -1,9 +1,10 @@
 import React from 'react';
+import Footer from './Footer';
 
 const Review = () => {
     return (
         <div>
-            <h2>this is review</h2>
+            <Footer></Footer>
         </div>
     );
 };
