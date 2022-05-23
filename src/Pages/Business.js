@@ -3,7 +3,7 @@ import React from 'react';
 const Business = () => {
     return (
         <div>
-            <h1 className='text-slate-600 text-2xl   text-center font-bold ' > Have Look at Our Business Summary  </h1>
+            <h1 className='text-slate-600 text-2xl   text-center font-bold mt-10   ' > Have Look at Our Business Summary  </h1>
             <div class="stats shadow flex justify-center ">
 
                 <div class="stat">

@@ -10,8 +10,8 @@ const AvailableParts = () => {
             .then(data => setParts(data));
     }, [])
     return (
-        <div>
-            <h1 className='font-bold flex justify-center  ' >Available Parts</h1>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
+
             {
                 parts.map(part => <Parts
                     key={part._id}
