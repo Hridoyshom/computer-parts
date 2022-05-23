@@ -4,7 +4,7 @@ import Footer from './Footer';
 const Review = () => {
     return (
         <div>
-            <Footer></Footer>
+
         </div>
     );
 };
