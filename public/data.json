@@ -1,6 +1,5 @@
 [
     {
-        "_id": "1",
         "name": " Graphics Card ",
         "img": "https://i.ibb.co/qrf7rKw/rsz-gtx-1650-oc-010-500x500.jpg",
         "des": "This the finest gtx 1650. It is a mid range beast. Most mid range graphical game runs smoothly.",
@@ -9,7 +8,6 @@
         "price": "$850"
     },
     {
-        "_id": "2",
         "name": " RAM ",
         "img": "https://i.ibb.co/YptfTbC/rsz-3possessed-photography-nuc3nfb-6po-unsplash.jpg",
         "des": "It is a 8gb 2200mhz rapid access memory  .",
@@ -18,7 +16,6 @@
         "price": "$32"
     },
     {
-        "_id": "3",
         "name": " Processor ",
         "img": "https://i.ibb.co/DVNdq8P/rsz-83bc2ef0af141fc357641c48b0aca2fe.jpg",
         "des": "It is a very entry level processor having only two core.",
@@ -27,7 +24,6 @@
         "price": "$150"
     },
     {
-        "_id": "4",
         "name": " Cpu Cooler",
         "img": "https://i.ibb.co/tZV2bp2/rsz-1ux20001.jpg",
         "des": "This used to balance the temperature in the pc.",
@@ -36,7 +32,6 @@
         "price": "$100"
     },
     {
-        "_id": "5",
         "name": " Sata SSD ",
         "img": "https://i.ibb.co/jv5s5K2/rsz-green-1tb-sata-02-500x500.jpg",
         "des": "SSD makes the operating system to run faster in the CPU. This one is 250gb SATA ssd.",
@@ -45,7 +40,6 @@
         "price": "$142"
     },
     {
-        "_id": "6",
         "name": " Motherboard ",
         "img": "https://i.ibb.co/Jc8117w/rsz-asus-rog-strix-b460-f-gaming-motherboard.jpg",
         "des": "It is an ASUS ROG strix motherboard. Used for mainly gaming centric pc",
