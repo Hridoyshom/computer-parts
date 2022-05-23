@@ -1,0 +1,56 @@
+[
+    {
+        "_id": "1",
+        "name": " Graphics Card ",
+        "img": "https://i.ibb.co/MSR7bg4/gtx-1650-oc-010-500x500.jpg",
+        "des": "This the finest gtx 1650. It is a mid range beast. Most mid range graphical game runs smoothly.",
+        "minorder": "5pc",
+        "available": "50pc",
+        "price": "$850"
+    },
+    {
+        "_id": "2",
+        "name": " Graphics Card ",
+        "img": "https://i.ibb.co/MSR7bg4/gtx-1650-oc-010-500x500.jpg",
+        "des": "This the finest gtx 1650. It is a mid range beast. Most mid range graphical game runs smoothly.",
+        "minorder": "5pc",
+        "available": "50pc",
+        "price": "$850"
+    },
+    {
+        "_id": "3",
+        "name": " Graphics Card ",
+        "img": "https://i.ibb.co/MSR7bg4/gtx-1650-oc-010-500x500.jpg",
+        "des": "This the finest gtx 1650. It is a mid range beast. Most mid range graphical game runs smoothly.",
+        "minorder": "5pc",
+        "available": "50pc",
+        "price": "$850"
+    },
+    {
+        "_id": "4",
+        "name": " Graphics Card ",
+        "img": "https://i.ibb.co/MSR7bg4/gtx-1650-oc-010-500x500.jpg",
+        "des": "This the finest gtx 1650. It is a mid range beast. Most mid range graphical game runs smoothly.",
+        "minorder": "5pc",
+        "available": "50pc",
+        "price": "$850"
+    },
+    {
+        "_id": "5",
+        "name": " Graphics Card ",
+        "img": "https://i.ibb.co/MSR7bg4/gtx-1650-oc-010-500x500.jpg",
+        "des": "This the finest gtx 1650. It is a mid range beast. Most mid range graphical game runs smoothly.",
+        "minorder": "5pc",
+        "available": "50pc",
+        "price": "$850"
+    },
+    {
+        "_id": "6",
+        "name": " Graphics Card ",
+        "img": "https://i.ibb.co/MSR7bg4/gtx-1650-oc-010-500x500.jpg",
+        "des": "This the finest gtx 1650. It is a mid range beast. Most mid range graphical game runs smoothly.",
+        "minorder": "5pc",
+        "available": "50pc",
+        "price": "$850"
+    }
+]
