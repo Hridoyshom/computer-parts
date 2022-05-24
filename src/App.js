@@ -12,6 +12,7 @@ import Footer from './Pages/Footer';
 import SignUp from './Pages/SignUp';
 import AvailableParts from './Pages/AvailableParts';
 import Purchase from './Pages/Purchase';
+import RequireAuth from './Pages/RequireAuth';
 
 
 const App = () => {
@@ -26,7 +27,9 @@ const App = () => {
         <Route path='/review' element={<Review></Review>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
-        <Route path='/purchase' element={<Purchase></Purchase>}></Route>
+        <Route path='/purchase' element={<RequireAuth>
+          <Purchase></Purchase>
+        </RequireAuth>}></Route>
 
       </Routes>
       <Footer></Footer>
