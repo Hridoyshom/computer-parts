@@ -10,6 +10,8 @@ import Blogs from './Blogs';
 import ExtraSection from './Pages/ExtraSection';
 import Footer from './Pages/Footer';
 import SignUp from './Pages/SignUp';
+import AvailableParts from './Pages/AvailableParts';
+import Purchase from './Pages/Purchase';
 
 
 const App = () => {
@@ -24,6 +26,7 @@ const App = () => {
         <Route path='/review' element={<Review></Review>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/purchase' element={<Purchase></Purchase>}></Route>
 
       </Routes>
       <Footer></Footer>
