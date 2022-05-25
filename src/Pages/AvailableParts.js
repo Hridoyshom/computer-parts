@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Parts from './Parts';
+import Purchase from './Purchase';
 
 const AvailableParts = () => {
     const [parts, setParts] = useState([]);
+
 
     useEffect(() => {
         fetch('http://localhost:5000/part')
@@ -15,10 +17,12 @@ const AvailableParts = () => {
             {
                 parts.map(part => <Parts
                     key={part._id}
-                    part={part}>
+                    part={part}
+                >
 
                 </Parts>)
             }
+
         </div>
     );
 };

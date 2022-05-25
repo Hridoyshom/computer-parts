@@ -1,9 +1,17 @@
 import React from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 
-const Parts = ({ part }) => {
-    const { name, img, des, price, available, minorder } = part;
+const Parts = ({ part, setService }) => {
+    const { _id, name, img, des, price, available, minorder } = part;
+
+    const navigate = useNavigate();
+    const navigateToPurchase = _id => {
+        navigate(`/purchase/${name}`)
+
+    }
+
     return (
-        <div  >
+        <div >
             <div>
 
             </div>
@@ -17,7 +25,7 @@ const Parts = ({ part }) => {
                     <p>Available Quantity:{available}</p>
                     <p>Price:{price}</p>
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                        <button onClick={() => navigateToPurchase(_id)} class="btn btn-primary">Buy Now</button>
                     </div>
                 </div>
             </div>

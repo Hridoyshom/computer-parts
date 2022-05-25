@@ -5,11 +5,11 @@ const Banner = () => {
         <div>
             <div>
                 <div>
-                    <div class="carousel w-full">
-                        <div id="item1" class="carousel-item w-full">
+                    <div className="carousel w-full">
+                        <div id="item1" className="carousel-item w-full">
                             <img src="https://i.ibb.co/ZJ1MJGZ/rsz-241rygojrsil-ac-sx450.jpg" class="w-full" />
                         </div>
-                        <div id="item2" class="carousel-item w-full">
+                        <div id="item2" className="carousel-item w-full">
                             <img src="https://www.intel.com/content/dam/www/global/badges/core-x-series-framed-badge-rwd.jpg.rendition.intel.web.480.270.jpg" class="w-full" />
                         </div>
                         <div id="item3" class="carousel-item w-full">
