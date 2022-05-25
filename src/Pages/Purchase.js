@@ -12,7 +12,7 @@ const Purchase = () => {
     return (
         <div >
             <div className='flex justify-center items-center' >
-                <h1 className='text-2xl' >name: {purchaseId.name}</h1><br />
+                <h1 className='text-2xl' >name: {name}</h1><br />
             </div>
             <div className='flex h-screen justify-center items-center' >
                 <button class="btn flex  justify-center ">Button</button>
