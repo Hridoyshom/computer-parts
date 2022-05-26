@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import BuyModal from './BuyModal';
 import auth from './firebase.init';
 import Parts from './Parts';
 
 const Purchase = () => {
     const { id } = useParams();
-    const [singleParts, setSingleParts] = useState({})
+    const [singleParts, setSingleParts] = useState({});
 
     useEffect(() => {
         fetch(`http://localhost:5000/single-part/${id}`)
@@ -15,16 +16,29 @@ const Purchase = () => {
 
     }, [id])
 
-    console.log(singleParts);
+    // console.log(singleParts);
     return (
-        <div >
+        <div className='flex justify-center items-center' >
 
-            <h1 className='text-2xl' >name:{singleParts?.name}</h1>
+            <div class="card w-96 bg-base-100 shadow-2xl mb-11 ">
+                <div class="card-body">
+                    <h2 class=" text-2xl">Name:{singleParts?.name}</h2>
+                    <p class=" text-xl">Description:{singleParts?.des}</p>
+                    <p class=" text-xl">Price:{singleParts?.price}</p>
+                    <p class=" text-xl">Available Quantity:{singleParts?.available}</p>
+                    <p class=" text-xl">Minimum Order:{singleParts?.minorder}</p>
+                    <div class="card-actions justify-end">
 
-
-            <div className='flex h-screen justify-center items-center' >
-                <button class="btn flex  justify-center ">Button</button>
+                        <label for="buy-modal"
+                            onClick={() => setSingleParts(singleParts)}
+                            class="btn btn-outline">Buy Now</label>
+                    </div>
+                    {singleParts && <BuyModal setSingleParts={setSingleParts} singleParts={singleParts} ></BuyModal>}
+                </div>
             </div>
+
+
+
 
         </div>
     );

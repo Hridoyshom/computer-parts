@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form"
 import Loading from './Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Login = ({ data }) => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [
@@ -35,7 +35,9 @@ const Login = () => {
     const onSubmit = data => {
         console.log(data);
         signInWithEmailAndPassword(data.email, data.password);
+
     }
+
     return (
         <div className='flex h-screen justify-center items-center' >
             <div className="card w-96 bg-base-100 shadow-xl">
