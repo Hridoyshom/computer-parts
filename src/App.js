@@ -13,6 +13,7 @@ import AvailableParts from './Pages/AvailableParts';
 import Purchase from './Pages/Purchase';
 import RequireAuth from './Pages/RequireAuth';
 import Blogs from './Pages/Blogs';
+import NotFound from './Pages/NotFound';
 
 
 const App = () => {
@@ -27,9 +28,10 @@ const App = () => {
         <Route path='/review' element={<Review></Review>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
-        <Route path='/purchase/:purchaseId' element={<RequireAuth>
+        <Route path='/purchase/:id' element={<RequireAuth>
           <Purchase></Purchase>
         </RequireAuth>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
 
       </Routes>
       <Footer></Footer>

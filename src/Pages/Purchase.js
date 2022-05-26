@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import auth from './firebase.init';
 import Parts from './Parts';
 
 const Purchase = () => {
-    const { purchaseId } = useParams();
-    const [_id, name, img, des, price, available, minorder] = purchaseId;
+    const { id } = useParams();
+    const [singleParts, setSingleParts] = useState({})
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/single-part/${id}`)
+            .then((res => res.json()))
+            .then(data => setSingleParts(data));
 
+    }, [id])
+
+    console.log(singleParts);
     return (
         <div >
-            <div className='flex justify-center items-center' >
-                <h1 className='text-2xl' >name: {name}</h1><br />
-            </div>
+
+            <h1 className='text-2xl' >name:{singleParts?.name}</h1>
+
+
             <div className='flex h-screen justify-center items-center' >
                 <button class="btn flex  justify-center ">Button</button>
             </div>

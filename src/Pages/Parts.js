@@ -6,7 +6,8 @@ const Parts = ({ part, setService }) => {
 
     const navigate = useNavigate();
     const navigateToPurchase = _id => {
-        navigate(`/purchase/${name}`)
+        navigate(`/purchase/${_id} `)
+
 
     }
 
