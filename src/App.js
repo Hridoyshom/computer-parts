@@ -15,10 +15,11 @@ import RequireAuth from './Pages/RequireAuth';
 import Blogs from './Pages/Blogs';
 import NotFound from './Pages/NotFound';
 import Dashboard from './Pages/Dashboard';
-import MyOrders from './MyOrders';
-import AddReview from './AddReview';
+import MyOrders from './Pages/MyOrders';
+import AddReview from './Pages/AddReview';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MyProfile from './Pages/MyProfile';
 
 
 
@@ -42,6 +43,7 @@ const App = () => {
         </RequireAuth>}>
           <Route index element={<MyOrders></MyOrders>} ></Route>
           <Route path='review' element={<AddReview></AddReview>} ></Route>
+          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
         </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
