@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form"
 import Loading from './Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-const Login = ({ data }) => {
+const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [

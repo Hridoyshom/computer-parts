@@ -8,6 +8,9 @@ import Parts from './Parts';
 const Purchase = () => {
     const { id } = useParams();
     const [singleParts, setSingleParts] = useState({});
+    const [user, loading, error] = useAuthState(auth);
+
+
 
     useEffect(() => {
         fetch(`http://localhost:5000/single-part/${id}`)
@@ -33,7 +36,7 @@ const Purchase = () => {
                             onClick={() => setSingleParts(singleParts)}
                             class="btn btn-outline">Buy Now</label>
                     </div>
-                    {singleParts && <BuyModal setSingleParts={setSingleParts} singleParts={singleParts} ></BuyModal>}
+                    {singleParts && <BuyModal user={user} setSingleParts={setSingleParts} singleParts={singleParts} ></BuyModal>}
                 </div>
             </div>
 

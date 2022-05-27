@@ -14,6 +14,9 @@ import Purchase from './Pages/Purchase';
 import RequireAuth from './Pages/RequireAuth';
 import Blogs from './Pages/Blogs';
 import NotFound from './Pages/NotFound';
+import Dashboard from './Pages/Dashboard';
+import MyOrders from './MyOrders';
+import AddReview from './AddReview';
 
 
 const App = () => {
@@ -31,6 +34,12 @@ const App = () => {
         <Route path='/purchase/:id' element={<RequireAuth>
           <Purchase></Purchase>
         </RequireAuth>}></Route>
+        <Route path='dashboard' element={<RequireAuth>
+          <Dashboard></Dashboard>
+        </RequireAuth>}>
+          <Route index element={<MyOrders></MyOrders>} ></Route>
+          <Route path='review' element={<AddReview></AddReview>} ></Route>
+        </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
       </Routes>

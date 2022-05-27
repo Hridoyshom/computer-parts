@@ -1,15 +1,30 @@
 import React from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from './firebase.init';
 
 const BuyModal = ({ singleParts, setSingleParts }) => {
-    const { name, price, minorder, available } = singleParts;
+    const { _id, name, price, minorder, available } = singleParts;
+    const [user, loading, error] = useAuthState(auth);
+
 
     const handleOrder = event => {
         event.preventDefault();
-        const minorders = event.target.min.value;
-        console.log(name, minorders);
+        // const minorders = event.target.minorder.value;
+        console.log(name, minorder);
+
+
+        const order = {
+            singlePartsId: _id,
+            singleParts: name,
+            buyerName: user.displayName,
+            buyerEmail: user.email,
+            phone: event.target.phone.value
+        }
+
         setSingleParts(null);
+
+
+
     }
 
 
@@ -21,11 +36,11 @@ const BuyModal = ({ singleParts, setSingleParts }) => {
                     <label for="buy-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 class="font-bold text-lg text-primary ">Buying:{name}</h3>
                     <form onSubmit={handleOrder} className='grid grid-cols-1 gap-3 justify-items-center mt-2' >
-                        <input type="text" placeholder='name' class="input input-bordered w-full max-w-xs" />
-                        <input type="Email" placeholder="Email" class="input input-bordered w-full max-w-xs" />
+                        <input type="text" disabled value={user.email} class="input input-bordered w-full max-w-xs" />
+                        <input type="text" disabled value={user?.displayName} class="input input-bordered w-full max-w-xs" />
                         <input type="number" placeholder='Order Quantity' min={minorder} max={available} class="input input-bordered w-full max-w-xs" />
                         <input type="text" placeholder="Address" class="input input-bordered w-full max-w-xs" />
-                        <input type="number" placeholder="Contact number" class="input input-bordered w-full max-w-xs" />
+                        <input type="text" name='phone' placeholder="Contact number" class="input input-bordered w-full max-w-xs" />
                         <input type="submit" value="Order" class=" btn btn-primary w-full max-w-xs" />
                     </form>
                     <div class="modal-action">

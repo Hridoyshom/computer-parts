@@ -36,7 +36,7 @@ const SignUp = () => {
             (data.email, data.password);
         await updateProfile({ displayName: data.name });
         console.log('updated');
-        navigate('/purchase')
+        navigate('/login')
 
     }
     return (
@@ -49,7 +49,7 @@ const SignUp = () => {
 
                             <div class="form-control w-full max-w-xs">
                                 <label class="label">
-                                    <span class="label-text">Email</span>
+                                    <span class="label-text">Name</span>
 
                                 </label>
                                 <input type="text" placeholder="Your Name" class="input input-bordered w-full max-w-xs"
