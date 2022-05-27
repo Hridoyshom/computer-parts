@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from './firebase.init';
+import { toast } from 'react-toastify';
 
 const BuyModal = ({ singleParts, setSingleParts }) => {
     const { _id, name, price, minorder, available } = singleParts;
@@ -16,6 +17,7 @@ const BuyModal = ({ singleParts, setSingleParts }) => {
         const order = {
             singlePartsId: _id,
             singleParts: name,
+            quantity: event.target.quantity.value,
             buyerName: user.displayName,
             buyerEmail: user.email,
             phone: event.target.phone.value
@@ -31,6 +33,7 @@ const BuyModal = ({ singleParts, setSingleParts }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                toast(`Order is confirmed, ${name}`)
                 setSingleParts(null);
             })
 
@@ -51,7 +54,7 @@ const BuyModal = ({ singleParts, setSingleParts }) => {
                     <form onSubmit={handleOrder} className='grid grid-cols-1 gap-3 justify-items-center mt-2' >
                         <input type="text" disabled value={user.email} class="input input-bordered w-full max-w-xs" />
                         <input type="text" disabled value={user?.displayName} class="input input-bordered w-full max-w-xs" />
-                        <input type="number" placeholder='Order Quantity' min={minorder} max={available} class="input input-bordered w-full max-w-xs" />
+                        <input type="number" name='quantity' placeholder='Order Quantity' min={minorder} max={available} class="input input-bordered w-full max-w-xs" />
                         <input type="text" placeholder="Address" class="input input-bordered w-full max-w-xs" />
                         <input type="text" name='phone' placeholder="Contact number" class="input input-bordered w-full max-w-xs" />
                         <input type="submit" value="Order" class=" btn btn-primary w-full max-w-xs" />
