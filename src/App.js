@@ -17,6 +17,9 @@ import NotFound from './Pages/NotFound';
 import Dashboard from './Pages/Dashboard';
 import MyOrders from './MyOrders';
 import AddReview from './AddReview';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const App = () => {
@@ -43,7 +46,9 @@ const App = () => {
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
       </Routes>
+      <ToastContainer />
       <Footer></Footer>
+
 
     </div>
   );
