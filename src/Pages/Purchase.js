@@ -13,7 +13,7 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/single-part/${id}`)
+        fetch(`https://frozen-spire-69456.herokuapp.com/single-part/${id}`)
             .then((res => res.json()))
             .then(data => setSingleParts(data));
 

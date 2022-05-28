@@ -11,7 +11,7 @@ const MyOrders = () => {
     const navigate = useNavigate();
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?buyerEmail=${user.email}`, {
+            fetch(`https://frozen-spire-69456.herokuapp.com/order?buyerEmail=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': ` Bearer ${localStorage.getItem('accessToken')} `

@@ -7,7 +7,7 @@ const AvailableParts = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/part')
+        fetch('https://frozen-spire-69456.herokuapp.com/part')
             .then(res => res.json())
             .then(data => setParts(data));
     }, [])

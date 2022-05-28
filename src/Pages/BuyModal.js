@@ -23,7 +23,7 @@ const BuyModal = ({ singleParts, setSingleParts }) => {
             phone: event.target.phone.value
         }
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://frozen-spire-69456.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
