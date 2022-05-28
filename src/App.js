@@ -55,7 +55,7 @@ const App = () => {
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
 
         </Route>
-        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
+        <Route path='/port' element={<Portfolio></Portfolio>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
       </Routes>
