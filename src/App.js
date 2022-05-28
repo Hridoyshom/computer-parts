@@ -20,6 +20,7 @@ import AddReview from './Pages/AddReview';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MyProfile from './Pages/MyProfile';
+import Users from './Pages/Users';
 
 
 
@@ -35,6 +36,7 @@ const App = () => {
         <Route path='/review' element={<Review></Review>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+
         <Route path='/purchase/:id' element={<RequireAuth>
           <Purchase></Purchase>
         </RequireAuth>}></Route>
@@ -44,6 +46,7 @@ const App = () => {
           <Route index element={<MyOrders></MyOrders>} ></Route>
           <Route path='review' element={<AddReview></AddReview>} ></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='users' element={<Users></Users>}></Route>
         </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
