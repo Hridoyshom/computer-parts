@@ -21,6 +21,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MyProfile from './Pages/MyProfile';
 import Users from './Pages/Users';
+import AddProduct from './Pages/AddProduct';
 
 
 
@@ -47,6 +48,8 @@ const App = () => {
           <Route path='review' element={<AddReview></AddReview>} ></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           <Route path='users' element={<Users></Users>}></Route>
+          <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
+
         </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
