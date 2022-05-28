@@ -12,9 +12,7 @@ const MyPortfolio = () => {
                     <p>project link: https://computer-parts-2a1a0.web.app/</p>
                     <p><p>project link: https://computer-parts-2a1a0.web.app/</p></p>
                     <p>projects link: https://radiant-faun-84c371.netlify.app/</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                    </div>
+
                 </div>
             </div>
         </div>

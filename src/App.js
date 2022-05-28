@@ -22,6 +22,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import MyProfile from './Pages/MyProfile';
 import Users from './Pages/Users';
 import AddProduct from './Pages/AddProduct';
+import MyPortfolio from './Pages/MyPortfolio';
 
 
 
@@ -36,7 +37,7 @@ const App = () => {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/review' element={<Review></Review>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/portfolio' element={<MyProfile></MyProfile>}></Route>
+
 
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
 
@@ -53,6 +54,7 @@ const App = () => {
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
 
         </Route>
+        <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
       </Routes>
