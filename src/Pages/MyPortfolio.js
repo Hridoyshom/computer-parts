@@ -11,7 +11,8 @@ const MyPortfolio = () => {
                     <p>Skills as a developer: HTML,JAVASCRIPT,React,Nodejs,MongoDB </p>
                     <p>project link: https://computer-parts-2a1a0.web.app/</p>
                     <p><p>project link: https://computer-parts-2a1a0.web.app/</p></p>
-                    <p>projects link: https://radiant-faun-84c371.netlify.app/</p>
+                    <p><p>project link: https://computer-parts-2a1a0.web.app/</p></p>
+
 
                 </div>
             </div>
