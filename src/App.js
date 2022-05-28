@@ -23,6 +23,7 @@ import MyProfile from './Pages/MyProfile';
 import Users from './Pages/Users';
 import AddProduct from './Pages/AddProduct';
 import MyPortfolio from './Pages/MyPortfolio';
+import Portfolio from './Pages/Portfolio';
 
 
 
@@ -54,7 +55,7 @@ const App = () => {
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
 
         </Route>
-        <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
       </Routes>
